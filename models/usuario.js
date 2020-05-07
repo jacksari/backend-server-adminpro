@@ -16,6 +16,7 @@ var usuarioSchema = new Schema({
     img: { type: String, required: false },
     role: { type: String, required: true, default: 'USER_ROLE', enum: rolesValidos },
     estado: { type: Boolean, default: true },
+    google: { type: Boolean, default: false }
 
 });
 

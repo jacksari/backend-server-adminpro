@@ -29,8 +29,7 @@ var imagenesRoutes = require('./routes/imagenes');
 
 
 //Conección a la BD
-mongoose.set('useCreateIndex', true);
-mongoose.connection.openUri('mongodb://localhost:27017/hospitalDB', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, (err, res) => {
+mongoose.connection.openUri('mongodb://localhost:27017/hospitalDB', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true, }, (err, res) => {
 
     if (err) throw err;
     console.log('Base de datos: \x1b[32m%s\x1b[0m', 'online');
